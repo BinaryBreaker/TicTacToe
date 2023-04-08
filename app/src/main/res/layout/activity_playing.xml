@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:backgroundTint="#FFFFFF"
+    tools:context=".playing">
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/BannerAdd" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/adView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/one_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:fontFamily="cursive"
+                        android:includeFontPadding="false"
+
+                        android:text="Player 1:"
+                        android:textColor="@color/black"
+                        android:textSize="25dp" />
+
+                    <TextView
+                        android:id="@+id/one_tag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:fontFamily="cursive"
+                        android:includeFontPadding="false"
+
+                        android:text="X"
+                        android:textColor="@color/black"
+                        android:textSize="25dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layoutDirection="rtl"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/two_tag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:fontFamily="cursive"
+                        android:includeFontPadding="false"
+
+                        android:text="O"
+                        android:textColor="@color/black"
+                        android:textSize="25dp" />
+
+                    <TextView
+                        android:id="@+id/two_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:fontFamily="cursive"
+                        android:includeFontPadding="false"
+
+                        android:text="Player 2:"
+                        android:textColor="@color/black"
+                        android:textSize="25dp" />
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:fontFamily="cursive"
+                        android:includeFontPadding="false"
+
+                        android:text="Game won"
+                        android:textColor="@color/black"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/one_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:fontFamily="cursive"
+                        android:includeFontPadding="false"
+
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="20dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layoutDirection="rtl"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/two_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:fontFamily="cursive"
+                        android:includeFontPadding="false"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:fontFamily="cursive"
+                        android:includeFontPadding="false"
+                        android:text="Game Won"
+
+                        android:textColor="@color/black"
+                        android:textSize="20dp" />
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp">
+
+                <ImageView
+                    android:id="@+id/vloume"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/ic_baseline_volume_up_24"
+                    android:backgroundTint="#050505"
+                    android:foregroundTint="#090909" />
+
+                <TextView
+                    android:id="@+id/mode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:fontFamily="cursive"
+                    android:text="Game mode"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginTop="100dp">
+
+                <com.example.tictactoe3.CustomView
+                    android:id="@+id/Canvas"
+                    android:layout_width="306dp"
+                    android:layout_height="306dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="70dp"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="0dp"
+                        android:clipToPadding="false"
+                        android:orientation="horizontal"
+                        android:padding="0dp">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/one"
+                            style="@style/TextAppearance.AppCompat.Button"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="#00FFFFFF"
+                            android:backgroundTint="#00A33A3A"
+                            android:fontFamily="cursive"
+                            android:shadowColor="#FFFFFF"
+                            android:textColor="#020202"
+                            android:textColorHighlight="#E1D9D9"
+                            android:textColorHint="#EFEAEA"
+                            android:textColorLink="#E8E3E3"
+                            android:textSize="70sp"
+                            android:textStyle="bold"
+                            app:rippleColor="#EAE5E5"
+                            app:strokeColor="#FFFFFF" />
+
+                        <View
+                            android:layout_width="3dp"
+                            android:layout_height="match_parent"
+                            android:background="#050505" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/two"
+                            style="@style/TextAppearance.AppCompat.Button"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="#00FFFFFF"
+                            android:backgroundTint="#00A33A3A"
+                            android:fontFamily="cursive"
+                            android:shadowColor="#FFFFFF"
+                            android:textColor="#020202"
+                            android:textColorHighlight="#E1D9D9"
+                            android:textColorHint="#EFEAEA"
+                            android:textColorLink="#E8E3E3"
+                            android:textSize="70sp"
+                            android:textStyle="bold"
+                            app:rippleColor="#EAE5E5"
+                            app:strokeColor="#FFFFFF" />
+
+
+                        <View
+                            android:layout_width="3dp"
+                            android:layout_height="match_parent"
+                            android:background="#050505" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+
+                            android:id="@+id/three"
+                            style="@style/TextAppearance.AppCompat.Button"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="#00FFFFFF"
+                            android:backgroundTint="#00A33A3A"
+                            android:fontFamily="cursive"
+                            android:shadowColor="#FFFFFF"
+                            android:textColor="#020202"
+                            android:textColorHighlight="#E1D9D9"
+                            android:textColorHint="#EFEAEA"
+                            android:textColorLink="#E8E3E3"
+                            android:textSize="70sp"
+                            android:textStyle="bold"
+                            app:rippleColor="#EAE5E5"
+                            app:strokeColor="#FFFFFF" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="0dp"
+                        android:orientation="vertical"
+                        android:padding="0dp">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="3dp"
+                            android:background="@color/black" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/four"
+                                style="@style/TextAppearance.AppCompat.Button"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:background="#00FFFFFF"
+                                android:backgroundTint="#00A33A3A"
+                                android:fontFamily="cursive"
+                                android:shadowColor="#FFFFFF"
+                                android:textColor="#020202"
+                                android:textColorHighlight="#E1D9D9"
+                                android:textColorHint="#EFEAEA"
+                                android:textColorLink="#E8E3E3"
+                                android:textSize="70sp"
+                                android:textStyle="bold"
+                                app:rippleColor="#EAE5E5"
+                                app:strokeColor="#FFFFFF" />
+
+
+                            <View
+                                android:layout_width="3dp"
+                                android:layout_height="match_parent"
+                                android:background="#050505" />
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/five"
+
+                                style="@style/TextAppearance.AppCompat.Button"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+
+                                android:background="#00FFFFFF"
+                                android:backgroundTint="#00A33A3A"
+                                android:fontFamily="cursive"
+                                android:shadowColor="#FFFFFF"
+                                android:textColor="#020202"
+                                android:textColorHighlight="#E1D9D9"
+                                android:textColorHint="#EFEAEA"
+                                android:textColorLink="#E8E3E3"
+                                android:textSize="70sp"
+                                android:textStyle="bold"
+                                app:rippleColor="#EAE5E5"
+                                app:strokeColor="#FFFFFF" />
+
+                            <View
+                                android:layout_width="3dp"
+                                android:layout_height="match_parent"
+                                android:background="#050505" />
+
+                            <androidx.appcompat.widget.AppCompatButton
+
+                                android:id="@+id/six"
+                                style="@style/TextAppearance.AppCompat.Button"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+
+                                android:background="#00FFFFFF"
+                                android:backgroundTint="#00A33A3A"
+                                android:fontFamily="cursive"
+                                android:shadowColor="#FFFFFF"
+                                android:textColor="#020202"
+                                android:textColorHighlight="#E1D9D9"
+                                android:textColorHint="#EFEAEA"
+                                android:textColorLink="#E8E3E3"
+                                android:textSize="70sp"
+                                android:textStyle="bold"
+                                app:rippleColor="#EAE5E5"
+                                app:strokeColor="#FFFFFF" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="0dp"
+                        android:orientation="vertical"
+                        android:padding="0dp">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="3dp"
+                            android:background="@color/black" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/seven"
+                                style="@style/TextAppearance.AppCompat.Button"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:background="#00FFFFFF"
+                                android:backgroundTint="#00A33A3A"
+                                android:fontFamily="cursive"
+                                android:shadowColor="#FFFFFF"
+                                android:textColor="#020202"
+                                android:textColorHighlight="#E1D9D9"
+                                android:textColorHint="#EFEAEA"
+                                android:textColorLink="#E8E3E3"
+                                android:textSize="70sp"
+                                android:textStyle="bold"
+                                app:rippleColor="#EAE5E5"
+                                app:strokeColor="#FFFFFF" />
+
+
+                            <View
+                                android:layout_width="3dp"
+                                android:layout_height="match_parent"
+                                android:background="#050505" />
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/eight"
+
+                                style="@style/TextAppearance.AppCompat.Button"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+
+                                android:background="#00FFFFFF"
+                                android:backgroundTint="#00A33A3A"
+                                android:fontFamily="cursive"
+                                android:shadowColor="#FFFFFF"
+                                android:textColor="#020202"
+                                android:textColorHighlight="#E1D9D9"
+                                android:textColorHint="#EFEAEA"
+                                android:textColorLink="#E8E3E3"
+                                android:textSize="70sp"
+                                android:textStyle="bold"
+                                app:rippleColor="#EAE5E5"
+                                app:strokeColor="#FFFFFF" />
+
+
+                            <View
+                                android:layout_width="3dp"
+                                android:layout_height="match_parent"
+                                android:background="#050505" />
+
+                            <androidx.appcompat.widget.AppCompatButton
+
+                                android:id="@+id/nine"
+                                style="@style/TextAppearance.AppCompat.Button"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+
+                                android:background="#00FFFFFF"
+                                android:backgroundTint="#00A33A3A"
+                                android:fontFamily="cursive"
+                                android:shadowColor="#FFFFFF"
+                                android:textColor="#020202"
+                                android:textColorHighlight="#E1D9D9"
+                                android:textColorHint="#EFEAEA"
+                                android:textColorLink="#E8E3E3"
+                                android:textSize="70sp"
+                                android:textStyle="bold"
+                                app:rippleColor="#EAE5E5"
+                                app:strokeColor="#FFFFFF" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="casual"
+                android:gravity="center_horizontal"
+                android:padding="5dp"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="50"
+                android:text="TIC TAC TOE"
+                android:textColor="#101010"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50dp"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Your name "
+                    android:inputType="text"
+                    android:padding="5dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:textColor="@color/black"
+                    android:outlineAmbientShadowColor="@color/black"
+                    android:textColorHint="#504F4F" />
+
+                <EditText
+                    android:id="@+id/room_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Room ID "
+                    android:backgroundTint="@android:color/transparent"
+                    android:inputType="text"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="#504F4F" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="90dp"
+            android:layout_marginRight="90dp"
+            android:background="@drawable/boders_main_buutons"
+            android:orientation="vertical"
+            android:padding="15dp">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:backgroundTint="#BB41D1"
+                android:hint="Play with AI"
+                android:onClick="com"
+                android:padding="5dp"
+                android:textColor="@color/white"
+                android:textColorHighlight="#FDFDFD"
+                android:textColorHint="#FFFFFF"
+                android:textColorLink="#FFFFFF"
+                app:iconTint="#FFFFFF" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:backgroundTint="#D14141"
+                android:hint="Offline"
+                android:onClick="ok"
+                android:padding="5dp"
+                android:textColor="@color/white"
+                android:textColorHighlight="#FDFDFD"
+                android:textColorHint="#FFFFFF"
+                android:textColorLink="#FFFFFF"
+                app:iconTint="#FFFFFF" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:backgroundTint="#FFB300"
+                android:hint="Make room"
+                android:onClick="game"
+                android:padding="5dp"
+                android:textColor="@color/white"
+                android:textColorHint="#FFFFFF" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+
+                android:hint="Join room"
+                android:onClick="join"
+                android:padding="5dp"
+                android:textColor="@color/white"
+                android:textColorHint="#FFFFFF" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

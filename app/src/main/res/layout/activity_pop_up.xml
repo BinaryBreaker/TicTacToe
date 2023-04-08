@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00FFFFFF"
+    >
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:background="@drawable/pop_up_background"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:id="@+id/text12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="237dp"
+            android:fontFamily="@font/aladin"
+            android:gravity="center_horizontal"
+            android:includeFontPadding="false"
+            android:text="You Won"
+            android:textColor="@color/black"
+            android:textSize="40sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0dp"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#656565"
+                />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/again"
+
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:layout_height="wrap_content"
+                android:text="Play Again"
+                android:includeFontPadding="false"
+                android:textColor="#403E3E"
+                android:textSize="15sp"/>
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0.5dp"
+                android:background="#656565"
+                />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/menu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#0003DAC5"
+                android:text="Menu"
+                android:includeFontPadding="false"
+                android:textColor="#474646"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
+</LinearLayout>
