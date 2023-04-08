@@ -49,6 +49,6 @@ The game includes Google Ad implementation to monetize the app. Ads will be disp
 
 ## Credits
 
-This game was developed by [Muhammad Muzamil](https://github.com/BinaryBreaker) as part of [Learning]. The game uses [list any libraries/frameworks used] for the development. 
+This game was developed by [Muhammad Muzamil](https://github.com/BinaryBreaker) as part of Learning. 
 
 
