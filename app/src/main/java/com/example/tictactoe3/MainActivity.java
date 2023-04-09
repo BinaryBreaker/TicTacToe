@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
     private RewardedAd rewardedAd;
 
 
-
     @SuppressLint("UseCompatLoadingForDrawables")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         name = findViewById(R.id.name);
         room_id = findViewById(R.id.room_id);
 
-      rewardedAd = new RewardedAd(this, getString(R.string.RewardedAdd));
+        rewardedAd = new RewardedAd(this, getString(R.string.RewardedAdd));
         RewardedAdLoadCallback adLoadCallback = new RewardedAdLoadCallback() {
             @Override
             public void onRewardedAdLoaded() {
@@ -68,8 +67,7 @@ public class MainActivity extends AppCompatActivity {
             }
         };
         rewardedAd.loadAd(new AdRequest.Builder().build(), adLoadCallback);
-
-//        ShowAdd();
+        ShowAdd();
 
     }
 
@@ -97,7 +95,6 @@ public class MainActivity extends AppCompatActivity {
 
                 @Override
                 public void onRewardedAdFailedToShow(AdError adError) {
-
 
 
                 }
@@ -149,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
         if (name.getText().length() <= 0) {
-            name.setError("Please choice a name ");
+            name.setError("Please chose a name ");
             return;
         } else {
             name.setError(null);
@@ -178,13 +175,14 @@ public class MainActivity extends AppCompatActivity {
     public void ok(View v) {
         startActivity(new Intent(getApplicationContext(), Offiline_play.class));
     }
+
     AlertDialog alert;
 
 
     @SuppressLint("UseCompatLoadingForDrawables")
     public void com(View v) {
         Intent intent = new Intent(MainActivity.this, computer_play.class);
-        AlertDialog.Builder alertDialog = new AlertDialog.Builder(MainActivity.this,R.style.CustomDialogTheme);
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(MainActivity.this, R.style.CustomDialogTheme);
         alertDialog.setTitle("Select Difficulty");
         String[] items = {"Easy", "Medium", "Hard"};
         int checkedItem = 1;
@@ -210,7 +208,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-         alert = alertDialog.create();
+        alert = alertDialog.create();
         alert.setCanceledOnTouchOutside(false);
         alert.getWindow().setBackgroundDrawable(getDrawable(pop_up_background));
         alert.show();
