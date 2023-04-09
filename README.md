@@ -16,9 +16,17 @@ This is a Tic Tac Toe game for Android devices that includes Online Multiplayer 
 
 The game can be installed on any Android device running Android 4.1 (Jelly Bean) or higher. Follow the steps below to install the game:
 
-1. Download the APK file from the Github repository.
+1. [Download](https://github.com/BinaryBreaker/TicTacToe/tree/master/apk/app-debug.apk) the APK file from the Github repository.
 2. Enable "Unknown sources" in the device's settings to allow installation of apps from sources other than the Google Play Store.
 3. Open the APK file and follow the instructions to install the game.
+
+## SceenShot
+
+| Image 1 | Image 2 |  Image 3 |
+| ------- | ------- |  ------- |
+|<img src="https://github.com/BinaryBreaker/TicTacToe/raw/master/apk/screenshot/tictactoe.jpeg" alt="TicTacToe screenshot" height="500">|<img src="https://github.com/BinaryBreaker/TicTacToe/raw/master/apk/screenshot/s.jpeg" alt="TicTacToe screenshot" height="500">|<img src="https://github.com/BinaryBreaker/TicTacToe/raw/master/apk/screenshot/ss2.jpeg" alt="TicTacToe screenshot" height="500">|
+
+
 
 ## Usage
 
